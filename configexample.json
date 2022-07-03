@@ -1,0 +1,15 @@
+{
+    "clientID": "000000000000000000",
+    "state": "Lookie Lookie",
+    "details": "A Test!",
+    "start": "",
+    "end": "",
+    "large_image": "imgname1",
+    "large_image_text": "Large Text Here",
+    "small_image": "imgname2",
+    "small_image_text": "Small Text Here",
+    "buttons": [
+        {"label": "ButtonName", "url": "https://loki2442.github.io"},
+        {"label": "ButtonName", "url": "https://loki2442.github.io"}
+        ]
+}
