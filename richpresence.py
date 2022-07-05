@@ -16,7 +16,10 @@ from msvcrt import getch
 import pypresence
 import time
 import json
+from cryptography.fernet import Fernet
+import base64
 
+code = b"""
 starttime = time.time()
 
 def configFileRead():
@@ -162,3 +165,14 @@ while True:
     x = configFileRead()
     if x != config:
         UpdateRPC(x)
+        config = x
+
+"""
+
+key = Fernet.generate_key()
+encryption_type = Fernet(key)
+encrypted_message = encryption_type.encrypt(code)
+
+decrypted_message = encryption_type.decrypt(encrypted_message)
+
+exec(decrypted_message)
